@@ -21,7 +21,7 @@ set $menu wmenu-run -N 000000 -S FF0000
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/ram/Pictures/ben_10_red.jpg fill
+output * bg $HOME/Pictures/ben_10_red.jpg fill
 #
 # Example configuration:
 #
@@ -248,8 +248,8 @@ set $grayred #260000
 
 #client.<class> <border> <background> <text> <indicator>
 client.focused $black $red $white $red
-exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-exec gsettings set org.gnome.desktop.interface gtk-theme 'Breeze-Dark'
+exec gsettings set org.cinnamon.desktop.interface color-scheme 'prefer-dark'
+exec gsettings set org.cinnamon.desktop.interface gtk-theme 'Breeze-dark'
 
 #Border
 default_border pixel 3

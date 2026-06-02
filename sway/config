@@ -16,7 +16,7 @@ set $right d
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu wmenu-run -N 000000 -S FF0000
+set $menu rofi -show drun -theme .config/rofi/theme.rasi -display-drun ""
 
 ### Output configuration
 #
@@ -53,9 +53,9 @@ output * bg $HOME/Pictures/ben_10_red.jpg fill
 #       middle_emulation enabled
 #   }
 #
-#   input type:keyboard {
-#       xkb_layout "eu"
-#   }
+   input type:keyboard {
+       xkb_numlock enabled
+   }
 #
 # You can also configure each device individually.
 # Read `man 5 sway-input` for more information about this section.
@@ -250,6 +250,11 @@ set $grayred #260000
 client.focused $black $red $white $red
 exec gsettings set org.cinnamon.desktop.interface color-scheme 'prefer-dark'
 exec gsettings set org.cinnamon.desktop.interface gtk-theme 'Breeze-dark'
+
+#Auto Start
+exec nm-applet --indicator
+exec nohup syncthing --no-browser & 
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 #Border
 default_border pixel 3

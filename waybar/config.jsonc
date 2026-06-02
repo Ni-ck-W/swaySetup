@@ -17,6 +17,7 @@
         "sway/window"
     ],
     "modules-right": [
+        "tray",
         "mpd",
 //        "idle_inhibitor",
         "pulseaudio",
@@ -30,8 +31,7 @@
 //        "sway/language",
         "battery",
         "battery#bat2",
-        "clock",
-        "tray"
+        "clock"
 //        "custom/power"
     ],
     // Modules configuration
@@ -169,10 +169,10 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "tooltip-format": "{ifname} {ipaddr}",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-disconnected": "Disconnected ⚠"
+        //"format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -211,7 +211,7 @@
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
 		"menu-actions": {
-			"shutdown": "shutdown",
+			"shutdown": "shutdown 0",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"

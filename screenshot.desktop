@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Screenshot
+Exec=flameshot gui 
+Type=Application
+Icon=flameshot
+Categories=Utility;

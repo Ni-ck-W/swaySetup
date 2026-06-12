@@ -253,6 +253,7 @@ exec gsettings set org.cinnamon.desktop.interface gtk-theme 'Breeze-dark'
 
 #Auto Start
 exec nm-applet --indicator
+exec blueman-applet
 exec nohup syncthing --no-browser & 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
